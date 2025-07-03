@@ -86,7 +86,7 @@ async function fetchMovies(keyword, isNewSearch = false) {
                         </div>
                         <div class="movie-list__footer">
                             <div class="movie-list__release-year">
-                                <i class="fas fa-calendar-alt"></i>
+                                <i class="fa-regular fa-calendar"></i>
                                 <span>${movie.Year}</span>
                             </div>
                             <div class="movie-list__rating">🤍</div>
@@ -96,7 +96,7 @@ async function fetchMovies(keyword, isNewSearch = false) {
         currentList.insertAdjacentHTML('beforeend', movieCard);
       });
     } else if (isNewSearch) {
-      root.innerHTML = `<p class="error-message">No movies found for "${keyword}".</p>`;
+      root.innerHTML = `<p class="error-message">"Movie not found!".</p>`;
     }
   } catch (error) {
     console.error('Error fetching movies:', error);
