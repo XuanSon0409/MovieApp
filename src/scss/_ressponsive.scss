@@ -1,0 +1,51 @@
+@media (max-width: 1024px) {
+
+    .movie-list {
+        padding: 2rem;
+    }
+
+    .movie-list__card {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+
+
+
+    .navbar__arrow {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .search {
+        max-width: 100%;
+        margin: 1rem 2rem;
+    }
+
+    .movie-list .row {
+        flex-direction: column;
+        gap: 1.5rem;
+
+    }
+
+    .movie-list__card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar__logo {
+        padding: 8px;
+        order: 1;
+    }
+}
