@@ -1,4 +1,4 @@
-const apiKey = 'a603582e';
+const apiKey = import.meta.env.VITE_API_KEY;
 const keywords = ['man', 'woman', 'science', 'love', 'squid', 'gun', 'family', 'sea', 'forest', 'friend', 'enemyapocalypse'];
 
 const root = document.querySelector('.movie-list');
