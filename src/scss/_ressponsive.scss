@@ -7,10 +7,20 @@
     .movie-list__card {
         width: 33.33%;
     }
+
+    .movie-detail {
+        flex-direction: column;
+
+        &__info {
+            padding: 1rem 0;
+        }
+    }
 }
 
 @media (max-width: 768px) {
-    .navbar {
+
+    .navbar,
+    .navbar-detail {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -20,7 +30,8 @@
 
 
 
-    .navbar__arrow {
+    .navbar__arrow,
+    .navbar-detail__arrow {
         position: absolute;
         left: 1rem;
         top: 50%;
@@ -41,10 +52,60 @@
     .movie-list__card {
         width: 100%;
     }
+
+    .movie-detail__poster img {
+        width: 100%;
+        height: auto;
+    }
+
+    .movie-detail {
+        padding: 1rem;
+
+        &__title {
+            font-size: 1.8rem;
+        }
+
+        &__description {
+            font-size: 1rem;
+        }
+
+        &__subinfo {
+            font-size: 0.7rem;
+
+            div {
+                padding: 0 0.5rem;
+            }
+        }
+
+        &__rating-container {
+            font-size: 1rem;
+        }
+
+        &__rating svg {
+            font-size: 1.5rem;
+        }
+    }
 }
 
+@media screen and (max-width: 767px) {
+    .movie-detail {
+        flex-direction: column;
+
+        .movie-poster {
+            margin: 0 auto;
+        }
+
+        .movie-info {
+            margin-top: 1rem;
+        }
+    }
+}
+
+
 @media (max-width: 480px) {
-    .navbar__logo {
+
+    .navbar__logo,
+    .navbar-detail__logo {
         padding: 8px;
         order: 1;
     }

@@ -210,15 +210,23 @@ body {
   .movie-list__card {
     width: 33.33%;
   }
+  .movie-detail {
+    flex-direction: column;
+  }
+  .movie-detail__info {
+    padding: 1rem 0;
+  }
 }
 @media (max-width: 768px) {
-  .navbar {
+  .navbar,
+  .navbar-detail {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
   }
-  .navbar__arrow {
+  .navbar__arrow,
+  .navbar-detail__arrow {
     position: absolute;
     left: 1rem;
     top: 50%;
@@ -235,9 +243,46 @@ body {
   .movie-list__card {
     width: 100%;
   }
+  .movie-detail__poster img {
+    width: 100%;
+    height: auto;
+  }
+  .movie-detail {
+    padding: 1rem;
+  }
+  .movie-detail__title {
+    font-size: 1.8rem;
+  }
+  .movie-detail__description {
+    font-size: 1rem;
+  }
+  .movie-detail__subinfo {
+    font-size: 0.7rem;
+  }
+  .movie-detail__subinfo div {
+    padding: 0 0.5rem;
+  }
+  .movie-detail__rating-container {
+    font-size: 1rem;
+  }
+  .movie-detail__rating svg {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .movie-detail {
+    flex-direction: column;
+  }
+  .movie-detail .movie-poster {
+    margin: 0 auto;
+  }
+  .movie-detail .movie-info {
+    margin-top: 1rem;
+  }
 }
 @media (max-width: 480px) {
-  .navbar__logo {
+  .navbar__logo,
+  .navbar-detail__logo {
     padding: 8px;
     order: 1;
   }
@@ -251,11 +296,12 @@ body {
   position: sticky;
   z-index: 1;
   top: 0;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
 }
 .navbar-detail__logo {
   cursor: pointer;
-  padding: 12px 12px;
+  position: relative;
+  top: 6px;
 }
 .navbar-detail__arrow {
   display: inline-flex;
@@ -263,7 +309,7 @@ body {
   cursor: pointer;
   color: white;
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 12px;
   justify-content: center;
 }
 .navbar-detail__arrow svg {
@@ -282,7 +328,7 @@ body {
   max-width: 1280px;
   color: white;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2rem 5rem;
 }
 .movie-detail__poster img {
   height: 600;
