@@ -2,6 +2,7 @@
 
     .movie-list {
         padding: 2rem;
+        display: contents;
     }
 
     .movie-list__card {
@@ -41,8 +42,9 @@
     .search {
         width: 100%;
         padding: 0 1rem;
-        margin: 1rem 1rem;
+        margin: 1rem auto;
         box-sizing: border-box;
+        align-items: center;
     }
 
     .movie-list .row {
@@ -50,7 +52,7 @@
         align-items: center;
         flex-direction: column;
         gap: 1rem;
-        padding: 1rem;
+        padding: 3rem;
 
     }
 
