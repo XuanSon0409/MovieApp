@@ -55,7 +55,7 @@ body {
   height: 50px;
   width: 100% !important;
   justify-content: space-between;
-  margin: 1rem auto 0 auto;
+  margin: 18px auto -1px auto;
   border-radius: 4px;
 }
 .search__input {
@@ -137,7 +137,7 @@ body {
   margin-top: 0;
 }
 .movie-list__card {
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
   color: white;
   width: 25%;
@@ -146,7 +146,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 253.66px;
-  margin: 10px;
+  margin: 8px;
   text-align: center;
 }
 .movie-list__poster {
@@ -331,7 +331,8 @@ body {
   padding: 2rem 5rem;
 }
 .movie-detail__poster img {
-  height: 600;
+  height: 600px;
+  width: 375.55px;
 }
 .movie-detail__info {
   padding: 0 2rem;
@@ -340,6 +341,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+  height: 45px;
 }
 .movie-detail__title {
   font-size: 2.4rem;
