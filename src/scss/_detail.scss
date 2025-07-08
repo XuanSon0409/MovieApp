@@ -12,7 +12,7 @@
     &__logo {
         cursor: pointer;
         position: relative;
-        top: 6px;
+        padding-top: 6px;
 
     }
 
@@ -44,28 +44,28 @@
 
 .movie-detail {
     display: flex;
-
     margin: 0 auto;
     max-width: 1280px;
     color: white;
     justify-content: space-between;
-    padding: 2rem 5rem;
+    // padding: 2rem ;
 
     &__poster {
         img {
             height: 600px;
-            width: 375.55px;
+            padding: 2rem 0 2rem 5rem;
+            // width: 375.55px;
         }
     }
 
     &__info {
-        padding: 0 2rem;
+        padding: 2rem 7rem 0 2rem;
     }
 
     &__container {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1rem;
+        margin: 0.5rem 0 1rem;
         height: 45px;
 
     }
@@ -138,6 +138,7 @@
     &__rating-container {
         font-size: 1.5rem;
         color: #e4bb24;
+        text-align: right;
 
         i {
             font-size: .7rem;
