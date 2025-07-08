@@ -2,7 +2,7 @@ const params = new URLSearchParams(window.location.search);
 const imdbID = params.get('imdbID');
 
 if (imdbID) {
-  fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=5a8937b5`)
+  fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=a603582e`)
     .then(res => res.json())
     .then(data => renderMovieDetail(data))
     .catch(err => console.error('Error:', err));
