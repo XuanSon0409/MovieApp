@@ -75,6 +75,7 @@
 
   &__release-year {
     font-size: 1rem;
+    font-style: italic
     // padding-top: 1rem;
   }
 
@@ -84,7 +85,7 @@
 
   &__rating {
     font-size: 1.25rem;
-    padding: 0 1rem 1rem;
+    padding: 0 12px 12px 1rem;
     color: #f6c700;
     cursor: pointer;
     border-radius: 50%;
