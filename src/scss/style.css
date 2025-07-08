@@ -265,8 +265,15 @@ body {
     width: 100% !important;
     padding: 0 !important;
   }
+  .movie-detail {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
   .movie-detail__title {
-    font-size: 1.8rem;
+    word-wrap: break-word !important;
+    overflow-wrap: anywhere !important;
+    white-space: normal;
+    margin-bottom: 0 !important;
   }
   .movie-detail__description {
     font-size: 1rem;
@@ -279,6 +286,9 @@ body {
   }
   .movie-detail__rating-container {
     font-size: 1rem;
+  }
+  .movie-detail__votes {
+    font-size: 12.8px;
   }
   .movie-detail__rating svg {
     font-size: 1.5rem;
@@ -340,27 +350,31 @@ body {
 .movie-detail {
   display: flex;
   margin: 0 auto;
-  max-width: 1280px;
   color: white;
   justify-content: space-between;
+  width: 100%;
+}
+.movie-detail__poster {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 .movie-detail__poster img {
-  height: 600px;
-  padding: 2rem 0 2rem 5rem;
+  height: auto;
+  padding: 2rem 0 0.5rem 7rem;
+  width: 485.55px;
 }
 .movie-detail__info {
-  padding: 2rem 7rem 0 2rem;
+  padding: 2rem 9rem 0 2rem;
 }
 .movie-detail__container {
   display: flex;
   justify-content: space-between;
-  margin: 0.5rem 0 1rem;
-  height: 45px;
+  margin: 0 0 1rem;
 }
 .movie-detail__title {
   font-size: 2.4rem;
   padding-right: 0.5rem;
-  margin-bottom: 10px;
 }
 .movie-detail__subinfo {
   display: flex;
@@ -376,6 +390,9 @@ body {
 }
 .movie-detail__subinfo div:first-child {
   padding-left: 0;
+}
+.movie-detail__votes {
+  font-size: 12.8px;
 }
 .movie-detail__description {
   font-size: 1.2rem;

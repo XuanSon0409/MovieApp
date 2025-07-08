@@ -80,10 +80,14 @@
     }
 
     .movie-detail {
-        // padding: 1rem;
+        flex-direction: column !important;
+        width: 100% !important;
 
         &__title {
-            font-size: 1.8rem;
+            word-wrap: break-word !important;
+            overflow-wrap: anywhere !important;
+            white-space: normal;
+            margin-bottom: 0 !important;
         }
 
         &__description {
@@ -101,6 +105,10 @@
 
         &__rating-container {
             font-size: 1rem;
+        }
+
+        &__votes {
+            font-size: 12.8px;
         }
 
         &__rating svg {
