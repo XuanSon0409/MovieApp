@@ -187,14 +187,13 @@ body {
 }
 .movie-list__release-year {
   font-size: 1rem;
-  padding-top: 1rem;
 }
 .movie-list .fa-regular {
   font-size: 1.25rem;
 }
 .movie-list__rating {
   font-size: 1.25rem;
-  padding: 1rem;
+  padding: 0 1rem 1rem;
   color: #f6c700;
   cursor: pointer;
   border-radius: 50%;
