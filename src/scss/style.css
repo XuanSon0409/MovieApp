@@ -252,14 +252,14 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 14px 2rem 2rem;
+    padding: 0 2rem;
     justify-content: center;
   }
   .movie-list__card {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 12px 12px 0 0;
+    border-radius: 0;
   }
   .movie-detail__poster img {
     width: 100% !important;
