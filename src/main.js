@@ -96,7 +96,7 @@ async function fetchMovies(keyword, isNewSearch = false) {
         currentList.insertAdjacentHTML('beforeend', movieCard);
       });
     } else if (isNewSearch) {
-      root.innerHTML = `<p class="error-message">"Movie not found!".</p>`;
+      root.innerHTML = `<p class="error-message">"Movie not found!"</p>`;
     }
   } catch (error) {
     console.error('Error fetching movies:', error);
