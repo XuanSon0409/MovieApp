@@ -252,6 +252,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 2rem;
     padding: 0 2rem;
     justify-content: center;
   }
