@@ -1,51 +1,36 @@
-# Challenge – Create a Sign‑In & Sign‑Up System  
-*(Movie Search Application)*
+# Challenge – Create a Sign‑In & Sign‑Up System  *(Movie Search Application)*
 
-The goal is to build a movie‑search application that uses external APIs and modern JavaScript features.  
-Users can look up films and view detailed information about them.  
-You may leverage the **OMDb API**, which returns data such as title, year, plot and ratings.
+- The challenge is to create a movie search application using external APIs and advanced JavaScript functionalities. The application will allow users to search for movies and display information about them. To create the application, developers can use APIs such as the OMDB API, which provides movie information such as title, year, plot, and ratings.
 
----
+## Application Pages&nbsp;*(build order)*
 
-## 📄 Application Pages&nbsp;*(build order)*
+- **Home**
+-  **Movie Details**
 
-1. **Home**  
-2. **Movie Details**
-
----
-
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML**  
 - **SCSS** – variables, mixins, nesting, `@extend`  
-- **BEM**‑structured class naming  
-- **JavaScript (ES6)** – API integration & user interactions  
-- **Fetch API** – HTTP requests
+- **BEM**‑structured class naming method
+- **JavaScript (ES6)** – For API integration and handling user interactions
+- **Fetch API** – For making HTTP requests to the server
 
----
+## Challenge Requirements
 
-## ✅ Challenge Requirements
+- Create a movie search app that matches the given design
+- Allow users to enter a movie name in the search input.
+- Display a movie or Movie not found text if there is no movie that matches the searched text.
+- Ensure the page is responsive on different screen sizes.
 
-- Build a movie‑search app that matches the given design.  
-- Provide a search input so users can enter a movie name.  
-- Show the list of results **or** a **“Movie not found”** message when nothing matches.  
-- Ensure full responsiveness across different screen sizes.
-
----
-
-## 🎨 Design Reference
+## Design Reference
 
 <https://react-query-movies-app.netlify.app/>
 
----
-
-## 🔌 API
+## API
 
 | Purpose | Endpoint / Link |
 |---------|-----------------|
 | **Search movies** | ```https://www.omdbapi.com/?apikey=YOUR_API_KEY&s=MOVIE_NAME``` |
 | **Get an API key** | <https://www.omdbapi.com/apikey.aspx> |
-
----
 
 > **Tip:** Replace `YOUR_API_KEY` with the key you receive from OMDb before making requests.
