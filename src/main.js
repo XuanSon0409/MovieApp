@@ -1,18 +1,14 @@
 const apiKey = import.meta.env.VITE_API_KEY;
-const keywords = ['man', 'woman', 'science', 'love', 'squid', 'gun', 'family', 'sea', 'forest', 'friend', 'enemyapocalypse'];
-
+const keywords = ['man', 'woman', 'science', 'love', 'squid', 'gun', 'family', 'sea', 'forest', 'friend', ' apocalypse'];
 const root = document.querySelector('.movie-list');
 const searchInput = document.querySelector('#input');
 const searchButton = document.querySelector('.search__button');
-
 let keywordIndex = 0;
 let isLoading = false;
 let isCustomSearch = false;
-
 function showSkeletons(count = 4) {
   const rowDiv = document.createElement('div');
   rowDiv.classList.add('row', 'skeleton-row');
-
   for (let i = 0; i < count; i++) {
     const skeletonCard = `
             <div class="movie-list__card skeleton">
@@ -30,14 +26,11 @@ function showSkeletons(count = 4) {
         `;
     rowDiv.insertAdjacentHTML('beforeend', skeletonCard);
   }
-
   root.appendChild(rowDiv);
 }
-
 function removeSkeletons() {
   document.querySelectorAll('.skeleton-row').forEach((row) => row.remove());
 }
-
 async function getData(url) {
   const response = await fetch(url);
   if (!response.ok) {
@@ -46,23 +39,16 @@ async function getData(url) {
   const data = await response.json();
   return data;
 }
-
 async function fetchMovies(keyword, isNewSearch = false) {
   if (!keyword) return;
-
   if (isNewSearch) {
     root.innerHTML = '';
   }
-
   showSkeletons();
-
   const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(keyword)}`;
-
-
   try {
     const data = await getData(apiUrl);
     removeSkeletons();
-
     if (data.Response === 'True') {
       data.Search.forEach((movie) => {
         if (
@@ -73,9 +59,7 @@ async function fetchMovies(keyword, isNewSearch = false) {
           rowDiv.classList.add('row');
           root.appendChild(rowDiv);
         }
-
         const currentList = root.lastElementChild;
-
         const movieCard = `
                     <div class="movie-list__card">
                         <div class="movie-list__poster" data-imdbid="${movie.imdbID}">
@@ -103,7 +87,6 @@ async function fetchMovies(keyword, isNewSearch = false) {
     removeSkeletons();
   }
 }
-
 async function loadNextKeyword() {
   if (keywordIndex >= keywords.length) return;
   isLoading = true;
@@ -111,21 +94,16 @@ async function loadNextKeyword() {
   isLoading = false;
   keywordIndex++;
 }
-
-
 window.addEventListener('DOMContentLoaded', () => {
   isCustomSearch = false;
   loadNextKeyword();
 });
-
 window.addEventListener('scroll', async () => {
   const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
   if (nearBottom && !isLoading && !isCustomSearch) {
     await loadNextKeyword();
   }
 });
-
-
 searchButton.addEventListener('click', async () => {
   const keyword = searchInput.value.trim();
   if (keyword) {
@@ -134,27 +112,17 @@ searchButton.addEventListener('click', async () => {
     await fetchMovies(keyword, true);
   }
 });
-
-
 let previousValue = searchInput.value.trim();
-
 searchInput.addEventListener('input', () => {
   const currentValue = searchInput.value.trim();
-
   if (currentValue === '' && previousValue !== '') {
     isCustomSearch = false;
     keywordIndex = 0;
     root.innerHTML = '';
     loadNextKeyword();
   }
-
   previousValue = currentValue;
 });
-
-
-
-
-
 root.addEventListener('click', (event) => {
   const card = event.target.closest('.movie-list__poster');
   if (card) {

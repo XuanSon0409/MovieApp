@@ -1,17 +1,14 @@
 const params = new URLSearchParams(window.location.search);
 const imdbID = params.get('imdbID');
-
 if (imdbID) {
   fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=a603582e`)
     .then(res => res.json())
     .then(data => renderMovieDetail(data))
     .catch(err => console.error('Error:', err));
 }
-
 function renderMovieDetail(data) {
   const container = document.querySelector('.movie-detail');
   container.innerHTML = '';
-
   container.innerHTML = `
     <div class="movie-detail__poster">
       <img src="${data.Poster !== 'N/A' ? data.Poster : 'https://via.placeholder.com/300x450'}" alt="${data.Title} Poster">
@@ -29,17 +26,14 @@ function renderMovieDetail(data) {
           </div>
         </div>
       </div>
-
       <div class="movie-detail__subinfo">
         <div>${data.Year}</div>
         <div>${data.Rated}</div>
         <div>${data.Released}</div>
         <div>${data.Runtime}</div>
       </div>
-
       <div class="movie-detail__description"><p>${data.Plot}</p></div>
       <hr class="movie-detail__divider">
-
       ${renderMeta('Genre', data.Genre)}
       ${renderMeta('Director', data.Director)}
       ${renderMeta('Writer', data.Writer)}
@@ -51,7 +45,6 @@ function renderMovieDetail(data) {
     </div>
   `;
 }
-
 function renderMeta(title, value) {
   return `
     <div class="movie-detail__medata">
@@ -60,7 +53,6 @@ function renderMeta(title, value) {
     </div>
   `;
 }
-
 document.querySelector('.navbar-detail__arrow').addEventListener('click', () => {
   window.location.href = 'index.html';
 });
